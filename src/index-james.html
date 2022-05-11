@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+<title>Stencil Component Starter</title>
+
+<script type="module" src="/build/mayoddl.esm.js"></script>
+<script nomodule src="/build/mayoddl.js"></script>
+
+<link rel="stylesheet" href="/build/mayoddl.css" />
+</head>
+<body>
+
+    <mc-container>
+        <mc-masthead title="Lorem Ipsum Company" logo="logo.svg" nav="navdata"></mc-masthead>
+    </mc-container>
+
+    <mc-container>
+        <mc-hero 
+            headingtext="Lorem ipsum man" 
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a fermentum quam." 
+            buttonlabel="Program Features" 
+            href="https://someurl.com" 
+            photodesktop="photo-hero-desktop.jpg" 
+            photomobile="photo-hero-mobile.jpg"></mc-hero>
+    </mc-container>
+
+    <mc-container>
+        <mc-feature data="featuredata" type="feature"></mc-feature>
+    </mc-container>
+
+    <mc-container class="gray">
+        <mc-feature  data="supportdata" type="support" sectionheader="Aenean venenatis sollicitudin"></mc-feature>
+    </mc-container>
+
+
+    <script>
+
+        // Support content 
+        const supportData= document.querySelector('mc-feature[type=support]');
+        supportData.data = [
+            {
+                  id: 1,
+                  header: 'Support You’re not alone',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Group Support',
+                  href: 'http://www.mayoclinic.org',
+                  img: 'photo-hero-mobile.jpg',
+                  alt: ''
+            },
+            {
+                  id: 2,
+                  header: 'Support 2 You’re not alone',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Group Support',
+                  href: 'http://www.mayoclinic.org',
+                  img: 'photo-hero-mobile.jpg',
+                  alt: ''
+            } ,
+            {
+                  id: 2,
+                  header: 'Support 2 You’re not alone',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Group Support',
+                  href: 'http://www.mayoclinic.org',
+                  img: 'photo-hero-mobile.jpg',
+                  alt: ''
+            } ,
+            {
+                  id: 2,
+                  header: 'Support 2 You’re not alone',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Group Support',
+                  href: 'http://www.mayoclinic.org',
+                  img: 'photo-hero-mobile.jpg',
+                  alt: ''
+            } ,
+            {
+                  id: 2,
+                  header: 'Support 2 You’re not alone',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Group Support',
+                  href: 'http://www.mayoclinic.org',
+                  img: 'photo-hero-mobile.jpg',
+                  alt: ''
+            }
+            
+        ];
+
+
+        // Feature content 
+        const featureData= document.querySelector('mc-feature');
+        featureData.data = [
+            {
+                  id: 1,
+                  header: 'You’re not alone',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Group Support',
+                  href: 'http://www.mayoclinic.org',
+                  img: 'photo-hero-mobile.jpg',
+                  alt: ''
+            },
+            {
+                  id: 2,
+                  header: 'You’re not alone',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Group Support',
+                  href: 'http://www.mayoclinic.org',
+                  img: 'photo-hero-mobile.jpg',
+                  alt: ''
+            }
+        ];
+
+        const masthead = document.querySelector('mc-masthead');
+        masthead.nav = [
+            {
+                'label':'Program Features',
+                'href':'https://www.stenciljs.com'
+            },{
+                'label':'Group Support',
+                'href':'https://www.stenciljs.com'
+            },{
+                'label':'About Our Company',
+                'href':'https://www.stenciljs.com'
+            }
+        ];
+    </script>
+
+
+</body>
+</html>

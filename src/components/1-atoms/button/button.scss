@@ -1,0 +1,78 @@
+@import '../../../global/helpers.scss';
+
+button {
+	@include button(#efefef);
+
+	border: 0;
+	font-size: clamp(14px, 1.8vw, 18px);
+	text-align: center;
+	line-height: 40px;
+	padding: 0 24px;
+	display: inline-block;
+	border-radius: 999vw;
+	cursor: pointer;
+
+	@media (min-width: 768px) {
+		line-height: 56px;
+		padding: 0 40px;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: 1px solid black;
+		outline-offset: -3px;
+	}
+
+	&[disabled] {
+		pointer-events: none;
+	}
+}
+
+:host(.ghost) button {
+	@include button(white);
+}
+
+:host(.ghost.white) button {
+	@include button(transparent);
+
+	color: #fff;
+	border-color: #fff;
+}
+
+:host(.plain) button {
+	@include button(transparent);
+	line-height: 1em;
+	padding: 0;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+:host(.primary) button {
+	background-color: var(--global-color-base-blue-300);
+	border: 1px solid var(--global-color-base-black);
+	color: var(--global-color-base-white);
+
+	&:hover {
+		background-color: var(--global-color-base-blue-400);
+	}
+
+	&:focus {
+		outline-color: var(--global-color-base-white);
+	}
+
+	&[disabled] {
+		background-color: lighten(#777, 45%);
+		color: var(--global-color-base-grey-200);
+		border-color: lighten(#777, 45%);
+	}
+}

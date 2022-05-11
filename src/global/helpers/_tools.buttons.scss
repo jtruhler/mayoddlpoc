@@ -1,0 +1,31 @@
+@mixin button($bgcolor, $fontcolor: black, $bordercolor: black, $disabledcolor: #777, $bgdisabled: #777) {
+	@if lightness($bgcolor) < 50% {
+		$bordercolor: darken($bgcolor, 10%);
+		$fontcolor: white;
+	}
+
+	@if $bgcolor == transparent {
+		$bordercolor: transparent;
+		$bgcolor: transparent;
+		$fontcolor: #0057b8;
+		$bgdisabled: transparent;
+	}
+
+	background-color: $bgcolor;
+	border: 1px solid $bordercolor;
+	color: $fontcolor;
+
+	&:hover {
+		background-color: darken($bgcolor, 10%);
+	}
+
+	&:focus {
+		outline-color: $fontcolor;
+	}
+
+	&[disabled] {
+		background-color: lighten($bgdisabled, 45%);
+		color: $disabledcolor;
+		border-color: lighten($bgdisabled, 45%);
+	}
+}

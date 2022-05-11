@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  max-width: 1340px;
+  padding: 0 24px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+:host(.gray) .wrapper {
+  background: #F6F6F6;
+  padding: 40px 0;
+}
+@media screen and (min-width: 768px) {
+  :host(.gray) .wrapper {
+    padding: 64px 0;
+  }
+}
+
+:host(.black) .wrapper {
+  background: #000;
+}

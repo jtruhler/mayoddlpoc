@@ -1,0 +1,50 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+        padding: 24px 0;
+    }
+}
+
+.logo {
+    max-width: 180px;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 230px;
+    }
+
+}
+
+nav {
+    display: none;
+
+    mc-link {
+        margin: 0 16px;
+
+        &::part(a) {
+            color: #000;
+            text-decoration: none;
+            font-size: clamp(14px,1.8vw,18px);
+        }
+    }
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+mc-button::part(button) {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+}

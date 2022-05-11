@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+<title>Stencil Component Starter</title>
+
+<script type="module" src="/build/mayoddl.esm.js"></script>
+<script nomodule src="/build/mayoddl.js"></script>
+
+<link rel="stylesheet" href="/build/mayoddl.css" />
+</head>
+<body>
+
+    <mc-container>
+        <mc-masthead title="Lorem Ipsum Company" logo="logo.svg" nav="navdata"></mc-masthead>
+    </mc-container>
+
+    <mc-container>
+        <mc-hero 
+            lazy="false"
+            headingtext="Lorem ipsum man" 
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a fermentum quam." 
+            buttonlabel="Program Features" 
+            href="https://www.apple.com" 
+            photodesktop="https://sportsmedicine.mayoclinic.org/wp-content/uploads/2020/12/hero-home-footer-1120.jpg" 
+            photomobile="https://sportsmedicine.mayoclinic.org/wp-content/uploads/2020/12/hero-home-footer-mobile-1120.jpg"></mc-hero>
+    </mc-container>
+
+    <mc-container>
+        <mc-callout
+            aheading='The No. 1 hospital',
+            atext='Mayo clinic is the No. 1 hospital overall.',
+            ahref='http://www.mayoclinic.org'.
+
+            bheading='International services at Mayo Clinic',
+            btext='The trusted leader in healthcare worldwide.',
+            bhref='http://www.cnn.com'.
+
+            cheading='Give now',
+            ctext='Your generous support leads to breakthrough results.',
+            chref='http://www.digg.com'.
+
+            dheading='When you need answers, you know where to go.',
+            dtext='The unknown is just a question. We find the answers.',
+            dhref='http://www.mayoclinic.org'.
+        ></mc-callout>
+    </mc-container>
+
+    <mc-container>
+        <mc-feature data="featuredata"  sectionheader=""></mc-feature>
+    </mc-container>
+
+    <mc-container>
+        <mc-hero 
+            lazy="false"
+            headingtext="Lorem ipsum man" 
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a fermentum quam." 
+            buttonlabel="Program Features" 
+            href="https://someurl.com" 
+            photodesktop="https://sportsmedicine.mayoclinic.org/wp-content/uploads/2020/12/hero-home-footer-1120.jpg" 
+            photomobile="https://sportsmedicine.mayoclinic.org/wp-content/uploads/2020/12/hero-home-footer-mobile-1120.jpg"></mc-hero>
+    </mc-container>
+
+    <mc-container class="gray">
+        <mc-feature  data="supportdata" sectionheader="Post-COVID-19 conditions"></mc-feature>
+    </mc-container>
+
+    <mc-container class="black">
+        <mc-footer></mc-footer>
+    </mc-container>
+
+    <script>
+        // Support content 
+        const supportData= document.querySelector('mc-feature[data=supportdata]');
+        supportData.data = [
+            {
+                  id: 1,
+                  header: 'Long-term effects of COVID-19',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Learn more',
+                  href: 'http://www.mayoclinic.org',
+                  alt: 'This is a test',
+                  photodesktop:'https://www.mayoclinichealthcare.co.uk/-/media/kcms/gbs/patient-consumer/images/2021/04/08/15/14/main_sq_3_1248x1248.jpg',
+                  photomobile: 'https://www.mayoclinichealthcare.co.uk/-/media/kcms/gbs/patient-consumer/images/2021/04/08/15/14/main_sq_3_1248x1248.jpg',
+                  lazy: 'true'
+
+            },
+            {
+                  id: 2,
+                  header: 'Post-COVID recovery',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Learn more',
+                  href: 'http://www.mayoclinic.org',
+                  alt: '',
+                  photodesktop:'https://www.mayoclinichealthcare.co.uk/-/media/kcms/gbs/patient-consumer/images/2021/04/08/15/14/main_sq_5_1248x1248.jpg',
+                  photomobile: 'https://www.mayoclinichealthcare.co.uk/-/media/kcms/gbs/patient-consumer/images/2021/04/08/15/14/main_sq_5_1248x1248.jpg',
+                  lazy: 'true'
+            } ,
+            {
+                  id: 3,
+                  header: 'Research',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Learn more',
+                  href: 'http://www.mayoclinic.org',
+                  alt: '',
+                  photodesktop:'https://www.mayoclinichealthcare.co.uk/-/media/kcms/gbs/patient-consumer/images/2021/04/08/15/14/main_sq_3_1248x1248.jpg',
+                  photomobile: 'https://www.mayoclinichealthcare.co.uk/-/media/kcms/gbs/patient-consumer/images/2021/04/08/15/14/main_sq_3_1248x1248.jpg',
+                  lazy: 'true'
+            } ,
+            {
+                  id: 4,
+                  header: 'Post-COVID-19 recovery care at Mayo Clinic',
+                  intro: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dui ut eros egestas eleifend ac vitae lorem.',
+                  linktext: 'Learn more',
+                  href: 'http://www.mayoclinic.org',
+                  alt: '',
+                  photodesktop:'https://www.mayoclinichealthcare.co.uk/-/media/kcms/gbs/patient-consumer/images/2021/04/08/15/14/sec_opinion_sq_1_1248x1248.jpg',
+                  photomobile: 'https://www.mayoclinichealthcare.co.uk/-/media/kcms/gbs/patient-consumer/images/2021/04/08/15/14/sec_opinion_sq_1_1248x1248.jpg',
+                  lazy: 'false'
+            } 
+            
+        ];
+        // Feature content 
+        const featureData= document.querySelector('mc-feature[data=featuredata]');
+        featureData.data = [
+            {
+                  id: 1,
+                  header: 'Vaccine guidance',
+                  intro: 'Find out everything you need to know about COVID-19 vaccines for adults and kids.',
+                  linktext: 'Vaccine guidance',
+                  href: 'http://www.mayoclinic.org',
+                  alt: '',
+                  photodesktop:'https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2021/06/01/21/19/eyeem-100029948-157295287-1248px.jpg',
+                  photomobile: 'https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2021/06/01/21/19/eyeem-100029948-157295287-1248px.jpg',
+                  lazy: 'false',
+                  links: '<span><a href="http://www.mayoclinic.org">Why get vaccinated?</a></span> <span><a href="http://www.mayoclinic.org">Are the vaccines safe? </a></span> <span><a href="http://www.mayoclinic.org">Do vaccines protect against the variants?</a></span> <span><a href="http://www.mayoclinic.org">Why get vaccinated?</a></span> <span><a href="http://www.mayoclinic.org">Are the vaccines safe? </a></span> <span><a href="http://www.mayoclinic.org">Do vaccines protect against the variants?</a></span>'
+            },
+            {
+                  id: 2,
+                  header: 'Patient & visitor updates',
+                  intro: 'Don’t delay needed care. Your safety is our top priority. Already have an appointment? Check updates to our visitor policies.',
+                  linktext: 'Patient & visitor updates',
+                  href: 'http://www.mayoclinic.org',
+                  alt: '',
+                  photodesktop:'https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2021/06/01/21/19/3956781-0008r-1248px.jpg',
+                  photomobile: 'https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2021/06/01/21/19/3956781-0008r-1248px.jpg',
+                  lazy: 'false'
+            },
+            {
+                  id: 3,
+                  header: 'About COVID-19',
+                  intro: 'Learn about COVID-19, symptoms, tests and treatments. Find out about virus variants and research.',
+                  linktext: 'About COVID-19',
+                  href: 'http://www.mayoclinic.org',
+                  alt: '',
+                  photodesktop:'https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2021/06/01/21/19/3985693-0166-1248px.jpg',
+                  photomobile: 'https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2021/06/01/21/19/3985693-0166-1248px.jpg',
+                  lazy: 'false'
+            }
+        ];
+        const masthead = document.querySelector('mc-masthead');
+        masthead.nav = [
+            {
+                'label':'Program Features',
+                'href':'https://www.stenciljs.com'
+            },{
+                'label':'Group Support',
+                'href':'https://www.stenciljs.com'
+            },{
+                'label':'About Our Company',
+                'href':'https://www.stenciljs.com'
+            }
+        ];
+    </script>
+
+
+</body>
+</html>

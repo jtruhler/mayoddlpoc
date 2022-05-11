@@ -1,0 +1,20 @@
+{
+  "entries": [
+    "./components/1-atoms/button/button.js",
+    "./components/1-atoms/container/container.js",
+    "./components/1-atoms/link/link.js",
+    "./components/1-atoms/picture/picture.js",
+    "./components/3-organisms/callout/callout.js",
+    "./components/3-organisms/feature/feature.js",
+    "./components/3-organisms/footer/footer.js",
+    "./components/3-organisms/hero/hero.js",
+    "./components/3-organisms/masthead/masthead.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.15.2",
+    "typescriptVersion": "4.5.4"
+  },
+  "collections": [],
+  "bundles": []
+}
